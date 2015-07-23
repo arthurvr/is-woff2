@@ -1,6 +1,6 @@
 {
   "name": "is-woff2",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if a buffer/Uint8Array is a woff2 file",
   "license": "MIT",
   "repository": "arthurvr/is-woff2",
