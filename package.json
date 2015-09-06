@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && mocha test"
+    "test": "xo && node test/test.js"
   },
   "files": [
     "index.js"
@@ -29,14 +29,8 @@
     "woff2"
   ],
   "devDependencies": {
-    "mocha": "*",
+    "ava": "*",
     "xo": "*",
     "read-chunk": "^1.0.1"
-  },
-  "xo": {
-    "envs": [
-      "node",
-      "mocha"
-    ]
   }
 }

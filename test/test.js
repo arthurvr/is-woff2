@@ -1,16 +1,18 @@
 'use strict';
 var path = require('path');
-var assert = require('assert');
+var test = require('ava');
 var readChunk = require('read-chunk');
 var isWoff2 = require('../');
 
-it('should detect woff2 files', function () {
+test('should detect woff2 files', function (t) {
 	var woff2 = readChunk.sync(path.join(__dirname, 'fixture/fixture.woff2'), 0, 8);
-	assert(isWoff2(woff2));
+	t.true(isWoff2(woff2));
 
 	var woff = readChunk.sync(path.join(__dirname, 'fixture/fixture.woff'), 0, 8);
-	assert(!isWoff2(woff));
+	t.false(isWoff2(woff));
 
 	var png = readChunk.sync(path.join(__dirname, 'fixture/fixture.png'), 0, 8);
-	assert(!isWoff2(png));
+	t.false(isWoff2(png));
+
+	t.end();
 });
