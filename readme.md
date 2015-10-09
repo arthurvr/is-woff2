@@ -13,8 +13,8 @@ $ npm install --save is-woff2
 ## Usage
 
 ```js
-var read = require('fs').readFileSync;
-var isWoff2 = require('is-woff2');
+const read = require('fs').readFileSync;
+const isWoff2 = require('is-woff2');
 
 isWoff2(read('example.woff2'));
 //=> true
